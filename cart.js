@@ -26,7 +26,7 @@ function cartproduct() {
                         <button class="btn badge bg-dark text-white" onclick="return addqty(${item.id})">+</button>
                         </td>
                         <td>
-                        <p class="m-0">₹${item.price * item.qty.toFixed(2)}</p>
+                        <p class="m-0">₹${(item.price * item.qty).toFixed(2)}</p>
                         </td>
                         <td>
                         <button class="btn btn-danger btn-sm" onclick="removeItem(${item.id})">Remove</button>
@@ -35,11 +35,45 @@ function cartproduct() {
         });
     }
     print.innerHTML = str;
-    if(cart.length == 0){
-        document.getElementById('carditemtotal').style.display = "none";
+    if (cart.length == 0) {
+        document.getElementById('bill').style.display = "none";
         document.getElementById('header').style.display = "none";
-    }else{
-        document.getElementById('carditemtotal').innerHTML = `Total : ₹${Total.toFixed(2)}`
+    } else {
+        document.getElementById('bill').style.display = "block";
+
+        document.getElementById('carditemtotal').innerHTML = `₹${Total.toFixed(2)}`
+
+        if (Total > 500 && Total < 1000) {
+            let Discountpercentage = 5;
+            let DiscountAmount = (Total * Discountpercentage) / 100;
+
+            document.getElementById('discountamount').innerHTML = `-${Discountpercentage}% (₹${DiscountAmount.toFixed(2)})`;
+
+            document.getElementById('discounttotal').innerHTML = `₹${(Total - DiscountAmount).toFixed(2)}`;
+        } 
+        else if (Total > 1000 && Total < 2000) 
+        {
+            let Discountpercentage = 10;
+            let DiscountAmount = (Total * Discountpercentage) / 100;
+
+            document.getElementById('discountamount').innerHTML = `-${Discountpercentage}% (₹${DiscountAmount.toFixed(2)})`;
+
+            document.getElementById('discounttotal').innerHTML = `₹${(Total - DiscountAmount).toFixed(2)}`;
+        }
+        else if (Total > 2000) 
+        {
+            let Discountpercentage = 20;
+            let DiscountAmount = (Total * Discountpercentage) / 100;
+
+            document.getElementById('discountamount').innerHTML = `-${Discountpercentage}% (₹${DiscountAmount.toFixed(2)})`;
+
+            document.getElementById('discounttotal').innerHTML = `₹${(Total - DiscountAmount).toFixed(2)}`;
+        }
+        else 
+        {
+            document.getElementById('discountamount').innerHTML = `0% (₹0.00)`;
+            document.getElementById('discounttotal').innerHTML = `₹${Total.toFixed(2)}`;
+        }
     }
 }
 
