@@ -19,14 +19,17 @@
         .body {
             font-family: "Lato", sans-serif;
         }
-        th,td{
-            border: 2px solid black;
+        table,tr,th{
+            border-bottom: 2px solid black;
+        }
+        .margin-top{
+            margin-top: 100px;
         }
     </style>
 </head>
 
 <body>
-    <header class="bg-black mb-4">
+    <header class="bg-black mb-4 fixed-top">
         <div class="container py-3">
             <div class="row align-items-center">
                 <div class="col-2 text-white">
@@ -65,47 +68,49 @@
             </div>
         </div>
     </header>
-    <div class="container">
-        <div class="row">
-            <table>
-                <thead id="header">
-                    <tr class="text-center">
-                        <th>
-                            Product
-                        </th>
-                        <th>
-                            Title
-                        </th>
-                        <th>
-                            Quantity
-                        </th>
-                        <th>
-                            Price
-                        </th>
-                        <th>
-                            Delete
-                        </th>
-                    </tr>
-                </thead>
-                <tbody id="row">
-                </tbody>
-            </table>
+    <div class="container margin-top">
+        <div class="row ">
             <div class="col-9">
+                <table class="col-12">
+                    <thead id="header">
+                        <tr class="text-center">
+                            <th>
+                                Product
+                            </th>
+                            <th>
+                                Title
+                            </th>
+                            <th>
+                                Quantity
+                            </th>
+                            <th>
+                                Price
+                            </th>
+                            <th>
+                                Delete
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody id="row">
+                    </tbody>
+                </table>
             </div>
-            <div class="col-3 mt-2 text-black border border-dark rounded-5 p-4" id="bill">
-                <div class="d-flex justify-content-between">
-                    <span class="fw-bold">Subtotal:</span>
-                    <span id="carditemtotal"></span>
-                </div>
-                <hr>
-                <div class="d-flex justify-content-between">
-                    <span class="fw-bold">Discount:</span>
-                    <span id="discountamount"></span>
-                </div>
-                <hr>
-                <div class="d-flex justify-content-between">
-                    <span class="fw-bold">Total:</span>
-                    <span id="discounttotal"></span>
+            <div class="col-3 mt-2 text-white position-sticky" id="bill">
+                <div class="border bg-black rounded-5 p-4">
+                    <div class="d-flex justify-content-between">
+                        <span class="fw-bold">Subtotal:</span>
+                        <span id="carditemtotal"></span>
+                    </div>
+                    <hr>
+                    <div class="d-flex justify-content-between">
+                        <span class="fw-bold">Discount:</span>
+                        <span id="discountamount"></span>
+                    </div>
+                    <hr>
+                    <div class="d-flex justify-content-between">
+                        <span class="fw-bold">Total:</span>
+                        <span id="discounttotal"></span>
+                    </div>
                 </div>
             </div>
         </div>
