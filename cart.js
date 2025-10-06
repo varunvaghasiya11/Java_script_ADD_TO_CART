@@ -59,7 +59,7 @@ function cartproduct() {
             document.getElementById('discountamount').innerHTML = `-${Discountpercentage}% (₹${DiscountAmount.toFixed(2)})`;
 
             document.getElementById('discounttotal').innerHTML = `₹${(Total - DiscountAmount).toFixed(2)}`;
-        }
+        } 
         else if (Total > 2000) 
         {
             let Discountpercentage = 20;
