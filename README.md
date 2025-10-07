@@ -61,13 +61,17 @@ It allows users to browse products, view detailed descriptions, and manage their
 ## 📸 Screenshots
 
 ### 🏠 Home Page
-![Home Page](./screenshots/Screenshot_3.jpg)
+![Home Page]
+![Screenshot 2025-10-07 at 5 48 29 PM](https://github.com/user-attachments/assets/b9640d90-a26b-40f7-9a84-62b7c3dd6ef9)
 
 ### 🛍 Product Detail Page
-![Product Detail](./screenshots/Screenshot_1.jpg)
+![Product Detail]
+![Screenshot 2025-10-07 at 5 52 40 PM](https://github.com/user-attachments/assets/993ccb23-a1ad-4596-9acc-cbd7f72597f5)
+
 
 ### 🧾 Cart Page
 ![Cart Page](./screenshots/Screenshot_2.jpg)
+![Screenshot 2025-10-07 at 5 52 47 PM](https://github.com/user-attachments/assets/012c31fc-545c-4621-9a9c-ff8041533896)
 
 ---
 
